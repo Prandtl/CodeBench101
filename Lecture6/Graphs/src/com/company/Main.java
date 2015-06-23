@@ -7,6 +7,11 @@ import java.util.Stack;
 public class Main {
 
     public static void main(String[] args) {
+        labyrinthCreator();
+    }
+
+    public static void persons()
+    {
         Person John = new Person("John");
         Person Elizabeth = new Person("Elizabeth");
         Person Booker = new Person("Booker");
@@ -34,7 +39,6 @@ public class Main {
 
         dfs(persons,0);
     }
-
     public static void dfs(Person[] person, int index) {
         Stack<Person> stack = new Stack<Person>();
         stack.add(person[index]);
@@ -55,7 +59,7 @@ public class Main {
         }
     }
 
-    static void labyrinthCreator(){
+    static void labyrinthCreator() {
         String[] stringVersion = new String[]{
                 "11111",
                 "10101",
@@ -72,7 +76,7 @@ public class Main {
             }
             workInProgress.add(row.toArray(new Cell[row.size()]));
         }
-        Cell[][] labyrinth = workInProgress.toArray(new Cell[workInProgress.size()][]);
+        Cell[][] labyrinth =workInProgress.toArray(new Cell[workInProgress.size()][]);
     }
 
 
